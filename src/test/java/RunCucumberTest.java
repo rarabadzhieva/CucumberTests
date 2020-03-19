@@ -1,5 +1,3 @@
-package checkout;
-
 import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.Cucumber;
 import org.junit.runner.RunWith;
@@ -9,7 +7,7 @@ import org.junit.runner.RunWith;
         strict = false,
         features = {"src/main/resources/features"},
         plugin = {"pretty", "json:target/cucumber.json"},
-        glue = {"checkout"},
+        glue = {"checkout", "bank"},
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         dryRun = false
         )
