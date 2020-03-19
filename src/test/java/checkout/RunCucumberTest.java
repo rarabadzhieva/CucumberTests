@@ -10,7 +10,8 @@ import org.junit.runner.RunWith;
         features = {"src/main/resources/features"},
         plugin = {"pretty", "json:target/cucumber.json"},
         glue = {"checkout"},
-        snippets = CucumberOptions.SnippetType.CAMELCASE
+        snippets = CucumberOptions.SnippetType.CAMELCASE,
+        dryRun = false
         )
 public class RunCucumberTest {
 }
