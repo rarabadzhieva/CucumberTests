@@ -1,6 +1,7 @@
 package bank;
 
 import io.cucumber.java.PendingException;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -46,6 +47,28 @@ public class BankStepDef {
         System.out.println("amount: " + amount);
         System.out.println("account type: " + accountType);
     }
+
+
+    @Given("^I have \\$(\\d+) in my account$")
+    public void iHaveBalanceInMyAccount(int amount) throws Throwable {
+        System.out.println("balance amount: " + amount);
+    }
+
+    @When("^I choose to withdraw the fixed amount of \\$(\\d+)$")
+    public void iChooseToWithdrawTheFixedAmountOfWithdrawal(int amount) throws Throwable {
+        System.out.println("fixed amount: " + amount);
+    }
+
+    @Then("^I should (.*)$")
+    public void iShouldOutcome(String outcome) throws Throwable {
+        System.out.println("outcome: " + outcome);
+    }
+
+    @And("^the balance of my account should be \\$(\\d+)$")
+    public void theBalanceOfMyAccountShouldBeRemaining(int amount) throws Throwable {
+        System.out.println("remaining amount: " + amount);
+    }
+
 
     class Account {
         public Account(int openingBalance) {
