@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
         strict = false,
         features = {"src/main/resources/features"},
         plugin = {"pretty", "json:target/cucumber.json"},
-        glue = {"checkout", "bank", "configurer"},
+        glue = {"checkout", "nicebank", "transforms"},
         snippets = SnippetType.CAMELCASE,
         dryRun = false
         )

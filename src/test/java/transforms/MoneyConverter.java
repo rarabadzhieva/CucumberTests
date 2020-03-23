@@ -1,4 +1,4 @@
-package configurer;
+package transforms;
 
 import cucumber.api.Transformer;
 import nicebank.Money;
