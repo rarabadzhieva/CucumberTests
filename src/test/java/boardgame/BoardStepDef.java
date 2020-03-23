@@ -1,10 +1,7 @@
 package boardgame;
 
-import io.cucumber.datatable.DataTable;
-import io.cucumber.java.PendingException;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import cucumber.api.DataTable;
+import cucumber.api.java.en.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +14,7 @@ public class BoardStepDef {
     public void aBoardLikeThis(DataTable table) throws Throwable {
         System.out.println(table.toString());
         this.board = new ArrayList<List<String>>();
-        for (List<String> row : table.asLists()) {
+        for (List<String> row : table.raw()) {
             this.board.add(new ArrayList<String>(row));
         }
     }

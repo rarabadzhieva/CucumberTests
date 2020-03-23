@@ -1,8 +1,6 @@
 package checkout;
 
-import io.cucumber.java.en.*;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import cucumber.api.java.en.*;
 
 import java.util.HashMap;
 

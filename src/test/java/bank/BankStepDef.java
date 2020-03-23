@@ -1,16 +1,36 @@
 package bank;
 
-import io.cucumber.java.PendingException;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import cucumber.api.PendingException;
+import cucumber.api.Transform;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import nicebank.Money;
+import org.junit.Assert;
+import configurer.MoneyConverter;
 
 public class BankStepDef {
 
-    @Given("^I have deposited \\$(\\d+) in my account$")
-    public void iHave$InMyAccount(int amount) throws Throwable {
-        new Account(amount);
+    class Account {
+
+        private Money balance = new Money();
+
+        public void deposit(Money amount) {
+            balance = balance.add(amount);
+        }
+
+        public Money getBalance() {
+            return balance;
+        }
+    }
+
+    @Given("^I have deposited (\\$\\d+\\.\\d+) in my account$")
+    public void iHave$InMyAccount(@Transform(MoneyConverter.class) Money amount) throws Throwable {
+        Account myAccount = new Account();
+        myAccount.deposit(amount);
+
+        Assert.assertEquals("Incorrect account balance -", amount, myAccount.getBalance());
     }
 
     @Given("^I have deposited \\$(\\d+) in my (\\w+) Account$")
@@ -67,12 +87,5 @@ public class BankStepDef {
     @And("^the balance of my account should be \\$(\\d+)$")
     public void theBalanceOfMyAccountShouldBeRemaining(int amount) throws Throwable {
         System.out.println("remaining amount: " + amount);
-    }
-
-
-    class Account {
-        public Account(int openingBalance) {
-
-        }
     }
 }

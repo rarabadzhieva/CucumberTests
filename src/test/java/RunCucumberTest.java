@@ -1,5 +1,6 @@
-import io.cucumber.junit.CucumberOptions;
-import io.cucumber.junit.Cucumber;
+import cucumber.api.CucumberOptions;
+import cucumber.api.SnippetType;
+import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
@@ -7,8 +8,8 @@ import org.junit.runner.RunWith;
         strict = false,
         features = {"src/main/resources/features"},
         plugin = {"pretty", "json:target/cucumber.json"},
-        glue = {"checkout", "bank"},
-        snippets = CucumberOptions.SnippetType.CAMELCASE,
+        glue = {"checkout", "bank", "configurer"},
+        snippets = SnippetType.CAMELCASE,
         dryRun = false
         )
 public class RunCucumberTest {
