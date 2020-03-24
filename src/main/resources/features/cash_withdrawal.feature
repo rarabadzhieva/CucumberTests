@@ -1,19 +1,4 @@
 Feature: Cash withdrawal
-  Scenario: Successful withdrawal from an account in credit
-    Given I have deposited $100.00 in my account
-    When I withdraw $20
-    Then $20 should be dispensed
-
-  Scenario: Successful withdrawal from an account in credit
-    Given I have deposited $100.00 in my account
-    When I withdraw $100
-    Then $100 should be dispensed
-
-  Scenario: Successful withdrawal from an account in credit
-    Given I have deposited $30.50 in my account
-    When I withdraw $40
-    Then $30 should be dispensed
-
   Scenario: Transfer funds from savings into checking account
     Given I have deposited $10 in my Checking Account
     And I have deposited $500 in my Savings Account
