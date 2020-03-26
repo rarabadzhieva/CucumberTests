@@ -14,7 +14,7 @@ public class WebDriverHooks {
         this.helper = helper;
     }
 
-    @After
+    @After("@UI")
     public void finish(Scenario scenario) {
         try {
             byte[] screenshot =

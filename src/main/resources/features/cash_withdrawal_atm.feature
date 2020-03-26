@@ -1,3 +1,4 @@
+@UI
 Feature: Cash withdrawal from ATM
   Scenario: Successful withdrawal from an account in credit
     Given my account has been credited with $100.00

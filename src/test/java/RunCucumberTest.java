@@ -10,6 +10,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "json:target/cucumber.json"},
         glue = {"checkout", "nicebank", "transforms", "hooks"},
         snippets = SnippetType.CAMELCASE,
+        tags = {"~@wip"},
         dryRun = false
         )
 public class RunCucumberTest {
