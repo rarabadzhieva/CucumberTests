@@ -1,3 +1,4 @@
+@regression
 Feature: Tic tac toe
 
   Data Tables example

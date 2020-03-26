@@ -1,3 +1,4 @@
+@regression
 Feature: Checkout
   Scenario Outline: Checkout a banana
     Given the price of a "banana" is 40 c
@@ -15,6 +16,7 @@ Feature: Checkout
     And I checkout 1 "banana"
     Then the total price should be 80c
 
+    @test
   Scenario: A banana and an apple
     Given the price of a "banana" is 40 c
     And the price of a "apple" is 25 c

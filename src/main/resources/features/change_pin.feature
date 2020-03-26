@@ -1,3 +1,4 @@
+@ignore
 Feature: Change PIN
 
   In order to be able to change it to something they can easily
