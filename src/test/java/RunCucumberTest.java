@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         strict = false,
         features = {"src/main/resources/features"},
-        plugin = {"pretty", "html:out", "json:target/cucumber.json"},
+        plugin = {"pretty", "json:target/cucumber.json"},
         glue = {"checkout", "nicebank", "transforms", "hooks"},
         snippets = SnippetType.CAMELCASE,
         dryRun = false

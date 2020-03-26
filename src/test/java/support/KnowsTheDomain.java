@@ -35,7 +35,7 @@ public class KnowsTheDomain {
 
     public EventFiringWebDriver getWebDriver() {
         if (driver == null) {
-            driver = new EventFiringWebDriver(new FirefoxDriver());
+            driver = new EventFiringWebDriver(new ChromeDriver());
         }
         return driver;
     }
