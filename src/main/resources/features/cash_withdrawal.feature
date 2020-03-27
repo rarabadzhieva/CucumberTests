@@ -1,3 +1,4 @@
+@regression
 Feature: Cash withdrawal
   Scenario: Transfer funds from savings into checking account
     Given I have deposited $10 in my Checking Account
@@ -14,7 +15,7 @@ Feature: Cash withdrawal
       Given I have <Balance> in my account
       When I choose to withdraw the fixed amount of <Withdrawal>
       Then I should <Outcome>
-      And the balance of my account should be <Remaining>
+      And the balance of my Account should be <Remaining>
 
   Examples: Successful withdrawal
     | Balance | Withdrawal | Remaining | Outcome             |

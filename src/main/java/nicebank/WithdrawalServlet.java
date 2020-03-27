@@ -6,8 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class WithdrawalServlet extends HttpServlet
-{
+public class WithdrawalServlet extends HttpServlet {
     private CashSlot cashSlot;
     private Account account;
 

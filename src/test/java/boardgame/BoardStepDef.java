@@ -11,7 +11,7 @@ public class BoardStepDef {
     private List<List<String>> board;
 
     @Given("^a board like this:$")
-    public void aBoardLikeThis(DataTable table) throws Throwable {
+    public void getBoard(DataTable table) throws Throwable {
         System.out.println(table.toString());
         this.board = new ArrayList<List<String>>();
         for (List<String> row : table.raw()) {
@@ -26,7 +26,7 @@ public class BoardStepDef {
     }
 
     @Then("^the board should look like this:$")
-    public void theBoardShouldLookLikeThis(DataTable expectedTable) throws Throwable {
+    public void checkBoard(DataTable expectedTable) throws Throwable {
         expectedTable.diff(DataTable.create(board));
         System.out.println(expectedTable.toString());
     }

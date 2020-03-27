@@ -13,7 +13,7 @@ public class CashSlotSteps {
     }
 
     @Then("^\\$(\\d+) should be dispensed$")
-    public void shouldBeDispensed(int dollars) throws Throwable {
+    public void checkDispensedAmount(int dollars) throws Throwable {
         Assert.assertEquals("Incorrect amount dispensed", dollars, helper.getCashSlot().getContent());
     }
 

@@ -12,7 +12,7 @@ public class StepDefinitions {
     Checkout checkout = new Checkout();
 
     @Given("^the price of a (.*) is (.*) c$")
-    public void thePriceOfAIsC(String name, int price) throws Throwable {
+    public void thePriceOfIs(String name, int price) throws Throwable {
          itemPrice.put(name, price);
     }
 
@@ -22,7 +22,7 @@ public class StepDefinitions {
     }
 
     @Then("^the total price should be (.*)c$")
-    public void theTotalPriceShouldBeC(int total) throws Throwable {
+    public void checkTotalPrice(int total) throws Throwable {
         assertEquals(total, checkout.total());
     }
 }

@@ -12,7 +12,7 @@ public class TellerSteps {
     }
 
     @When("^I withdraw \\$(\\d+)$")
-    public void iWithdraw$(int dollars) throws Throwable {
+    public void withdraw(int dollars) throws Throwable {
         helper.getTeller().withdrawFrom(helper.getMyAccount(), dollars);
     }
 }
