@@ -1,18 +1,40 @@
 package nicebank;
 
-public class Account {
+import org.javalite.activejdbc.Model;
 
-    private Money balance = new Money();
+import javax.inject.Inject;
 
-    public void credit(Money amount) {
-        balance = balance.add(amount);
+public class Account extends Model {
+    private TransactionQueue queue = new TransactionQueue();
+
+    @Inject
+    public Account() {}
+
+    public Account(int number){
+        setInteger("number", number);
+        setString("balance", "0.00");
     }
 
-    public Money getBalance() {
-        return balance;
+    public void credit(Money amount) {
+        queue.write("+" + amount.toString() + "," + getNumber());
     }
 
     public void debit(int dollars) {
-        balance = balance.minus(new Money(dollars, 0));
+        Money amount = new Money(dollars, 0);
+        queue.write("-" + amount.toString() + "," + getNumber());
+    }
+
+    public int getNumber() {
+        return getInteger("number");
+    }
+
+    public Money getBalance() {
+        refresh();
+        return new Money(getString("balance"));
+    }
+
+    public void setBalance(Money amount) {
+        setString("balance", amount.toString().substring(1));
+        saveIt();
     }
 }
