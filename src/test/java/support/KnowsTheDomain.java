@@ -1,10 +1,12 @@
 package support;
 
+import cucumber.runtime.java.guice.ScenarioScoped;
 import nicebank.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
+@ScenarioScoped
 public class KnowsTheDomain {
 
     private Account myAccount;

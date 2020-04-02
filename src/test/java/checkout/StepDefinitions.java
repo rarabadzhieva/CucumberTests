@@ -1,11 +1,13 @@
 package checkout;
 
 import cucumber.api.java.en.*;
+import cucumber.runtime.java.guice.ScenarioScoped;
 
 import java.util.HashMap;
 
 import static org.junit.Assert.*;
 
+@ScenarioScoped
 public class StepDefinitions {
 
     HashMap<String, Integer> itemPrice = new HashMap<>();

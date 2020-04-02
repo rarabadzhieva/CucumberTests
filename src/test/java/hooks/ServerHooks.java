@@ -2,9 +2,13 @@ package hooks;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import cucumber.runtime.java.guice.ScenarioScoped;
 import nicebank.AtmServer;
 import support.KnowsTheDomain;
 
+import javax.inject.Inject;
+
+@ScenarioScoped
 public class ServerHooks {
 
     public static final int PORT = 8887;
@@ -12,6 +16,7 @@ public class ServerHooks {
     private AtmServer server;
     private KnowsTheDomain helper;
 
+    @Inject
     public ServerHooks(KnowsTheDomain helper) {
         this.helper = helper;
     }

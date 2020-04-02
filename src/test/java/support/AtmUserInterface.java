@@ -1,15 +1,20 @@
 package support;
 
+import cucumber.runtime.java.guice.ScenarioScoped;
 import hooks.ServerHooks;
 import nicebank.Account;
 import nicebank.Teller;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
+import javax.inject.Inject;
+
+@ScenarioScoped
 public class AtmUserInterface implements Teller {
 
     private final EventFiringWebDriver webDriver;
 
+    @Inject
     public AtmUserInterface(EventFiringWebDriver webDriver) {
         this.webDriver = webDriver;
     }

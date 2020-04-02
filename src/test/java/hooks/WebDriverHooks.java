@@ -2,14 +2,19 @@ package hooks;
 
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
+import cucumber.runtime.java.guice.ScenarioScoped;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriverException;
 import support.KnowsTheDomain;
 
+import javax.inject.Inject;
+
+@ScenarioScoped
 public class WebDriverHooks {
 
     private KnowsTheDomain helper;
 
+    @Inject
     public WebDriverHooks(KnowsTheDomain helper) {
         this.helper = helper;
     }
