@@ -15,7 +15,7 @@ public class AtmUserInterface implements Teller {
     private final EventFiringWebDriver webDriver;
 
     @Inject
-    public AtmUserInterface(EventFiringWebDriver webDriver) {
+    public AtmUserInterface(MyWebDriver webDriver) {
         this.webDriver = webDriver;
     }
 

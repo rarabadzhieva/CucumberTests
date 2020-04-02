@@ -2,12 +2,9 @@ package nicebank;
 
 import org.javalite.activejdbc.Model;
 
-import javax.inject.Inject;
-
 public class Account extends Model {
     private TransactionQueue queue = new TransactionQueue();
 
-    @Inject
     public Account() {}
 
     public Account(int number){

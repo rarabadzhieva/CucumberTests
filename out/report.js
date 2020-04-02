@@ -13,19 +13,19 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 12827600,
+  "duration": 465533101,
   "status": "passed"
 });
 formatter.before({
-  "duration": 1239000,
+  "duration": 821100,
   "status": "passed"
 });
 formatter.before({
-  "duration": 1085400,
+  "duration": 207761199,
   "status": "passed"
 });
 formatter.before({
-  "duration": 697151100,
+  "duration": 434101,
   "status": "passed"
 });
 formatter.scenario({
@@ -66,7 +66,7 @@ formatter.match({
   "location": "AccountSteps.creditAccountWith(Money)"
 });
 formatter.result({
-  "duration": 123305600,
+  "duration": 127383700,
   "status": "passed"
 });
 formatter.match({
@@ -79,7 +79,7 @@ formatter.match({
   "location": "TellerSteps.withdraw(int)"
 });
 formatter.result({
-  "duration": 5500533900,
+  "duration": 5471170499,
   "status": "passed"
 });
 formatter.match({
@@ -92,7 +92,7 @@ formatter.match({
   "location": "CashSlotSteps.checkDispensedAmount(int)"
 });
 formatter.result({
-  "duration": 1958600,
+  "duration": 2749501,
   "status": "passed"
 });
 formatter.match({
@@ -105,24 +105,24 @@ formatter.match({
   "location": "AccountSteps.checkAccountBalance(Money)"
 });
 formatter.result({
-  "duration": 1121000,
+  "duration": 2384600,
   "status": "passed"
 });
 formatter.after({
-  "duration": 46300,
+  "duration": 63400,
   "status": "passed"
 });
 formatter.after({
-  "duration": 151500,
+  "duration": 4465601,
   "status": "passed"
 });
 formatter.after({
-  "duration": 7596301,
+  "duration": 156701,
   "status": "passed"
 });
 formatter.embedding("image/png", "embedded0.png");
 formatter.after({
-  "duration": 328495900,
+  "duration": 332635699,
   "status": "passed"
 });
 });
