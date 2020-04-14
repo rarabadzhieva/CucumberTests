@@ -10,7 +10,7 @@ import nicebank.TransactionProcessor;
 public class BackgroundProcessHooks {
     private Thread transactionProcessorThread;
 
-    @Before
+    @Before("@UI")
     public void startBackgroundThread() {
         transactionProcessorThread = new Thread() {
             public void run() {
@@ -22,7 +22,7 @@ public class BackgroundProcessHooks {
         transactionProcessorThread.start();
     }
 
-    @After
+    @After("@UI")
     public void stopBackgroundThread() {
         transactionProcessorThread.interrupt();
     }
