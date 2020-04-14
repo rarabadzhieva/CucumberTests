@@ -1,3 +1,7 @@
 .idea
 target
 learnCucumber.iml
+global-groovy.log
+out
+soapui-errors.log
+soapui.log
