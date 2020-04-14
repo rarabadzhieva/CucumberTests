@@ -7,15 +7,16 @@ import org.json.JSONObject;
 import org.junit.Assert;
 
 import javax.inject.Singleton;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Random;
 
 @Singleton
 public class Support {
 
     Response response;
-    String oath = "CquD8CKkO1lzu2iRRWWJbff6ODXJwQ0iI2vV";
-    String baseURI = "https://gorest.co.in/public-api/users";
 
     static String userID;
     static final String FIRST_NAME = "John";
@@ -26,6 +27,18 @@ public class Support {
     static RequestSpecification request;
 
     public void buildRequest() {
+        String oath = "";
+        String baseURI = "";
+        Properties properties = new Properties();
+        try {
+            String path = "web_service.properties";
+            InputStream inputStream = getClass().getClassLoader().getResourceAsStream(path);
+            properties.load(inputStream);
+            baseURI = properties.getProperty("restURI");
+            oath = properties.getProperty("restOATH");
+        } catch (IOException e) {
+            System.out.println("PROPERTIES NOT FOUND!");
+        }
         RestAssured.baseURI = baseURI;
         request = RestAssured.given().auth().oauth2(oath);
     }

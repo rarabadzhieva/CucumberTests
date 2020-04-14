@@ -22,7 +22,7 @@ public class SoapSteps {
         } else {
             requestEnv = String.format(Support.soapEnv, operation, num1, num2, operation);
         }
-        response = Support.sendRequest(Support.SERVICE_URL, requestEnv, operation);
+        response = Support.sendRequest(requestEnv, operation);
     }
 
 

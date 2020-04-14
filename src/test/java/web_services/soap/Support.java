@@ -14,12 +14,12 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.StringReader;
+import java.util.Properties;
 
 @Singleton
 public class Support {
-
-    static final String SERVICE_URL = "http://www.dneonline.com/calculator.asmx?WSDL";
 
     public static String soapEnv = "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:tem=\"http://tempuri.org/\">\n" +
             "   <soap:Header/>\n" +
@@ -31,11 +31,11 @@ public class Support {
             "   </soap:Body>\n" +
             "</soap:Envelope>";
 
-    public static String sendRequest(String endPoint, String xmlRequest, String operationName) {
+    public static String sendRequest(String xmlRequest, String operationName) {
         String response = "";
         try {
             WsdlProject project = new WsdlProject();
-            WsdlInterface[] wsdls = WsdlImporter.importWsdl(project, endPoint);
+            WsdlInterface[] wsdls = WsdlImporter.importWsdl(project, getServiceUrl());
             WsdlInterface wsdl = wsdls[0];
             SoapUI.getSettings().setBoolean(HttpSettings.RESPONSE_COMPRESSION, false);
             for (Operation operation : wsdl.getOperationList()) {
@@ -60,5 +60,19 @@ public class Support {
         Document doc = builder.parse(src);
         String result = doc.getElementsByTagName(operation + "Result").item(0).getTextContent();
         return Integer.parseInt(result);
+    }
+
+    private static String getServiceUrl() {
+        String url = "";
+        Properties properties = new Properties();
+        try {
+            String path = "web_service.properties";
+            InputStream inputStream = Support.class.getClassLoader().getResourceAsStream(path);
+            properties.load(inputStream);
+            url = properties.getProperty("soapURL");
+        } catch (IOException e) {
+            System.out.println("PROPERTIES NOT FOUND!");
+        }
+        return url;
     }
 }

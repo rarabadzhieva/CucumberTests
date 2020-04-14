@@ -67,11 +67,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 5642700,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1214500,
+  "duration": 6100300,
   "status": "passed"
 });
 formatter.scenario({
@@ -127,7 +123,7 @@ formatter.match({
   "location": "SoapSteps.calcTwoNumbers(String,int,String,int)"
 });
 formatter.result({
-  "duration": 2281780300,
+  "duration": 2546054100,
   "status": "passed"
 });
 formatter.match({
@@ -140,23 +136,15 @@ formatter.match({
   "location": "SoapSteps.checkResult(int)"
 });
 formatter.result({
-  "duration": 2671800,
+  "duration": 2677700,
   "status": "passed"
 });
 formatter.after({
-  "duration": 135200,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 35300,
+  "duration": 126100,
   "status": "passed"
 });
 formatter.before({
-  "duration": 43300,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 158300,
+  "duration": 36800,
   "status": "passed"
 });
 formatter.scenario({
@@ -212,7 +200,7 @@ formatter.match({
   "location": "SoapSteps.calcTwoNumbers(String,int,String,int)"
 });
 formatter.result({
-  "duration": 535309200,
+  "duration": 752484600,
   "status": "passed"
 });
 formatter.match({
@@ -225,15 +213,11 @@ formatter.match({
   "location": "SoapSteps.checkResult(int)"
 });
 formatter.result({
-  "duration": 1407000,
+  "duration": 3029100,
   "status": "passed"
 });
 formatter.after({
-  "duration": 68800,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 33300,
+  "duration": 89300,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -291,11 +275,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 62100,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 178300,
+  "duration": 57000,
   "status": "passed"
 });
 formatter.scenario({
@@ -351,7 +331,7 @@ formatter.match({
   "location": "SoapSteps.calcTwoNumbers(String,int,String,int)"
 });
 formatter.result({
-  "duration": 507160100,
+  "duration": 509150000,
   "status": "passed"
 });
 formatter.match({
@@ -364,23 +344,15 @@ formatter.match({
   "location": "SoapSteps.checkResult(int)"
 });
 formatter.result({
-  "duration": 1669500,
+  "duration": 1888500,
   "status": "passed"
 });
 formatter.after({
-  "duration": 75600,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 36300,
+  "duration": 55500,
   "status": "passed"
 });
 formatter.before({
-  "duration": 43300,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 133400,
+  "duration": 34700,
   "status": "passed"
 });
 formatter.scenario({
@@ -436,7 +408,7 @@ formatter.match({
   "location": "SoapSteps.calcTwoNumbers(String,int,String,int)"
 });
 formatter.result({
-  "duration": 659631400,
+  "duration": 706340300,
   "status": "passed"
 });
 formatter.match({
@@ -449,15 +421,11 @@ formatter.match({
   "location": "SoapSteps.checkResult(int)"
 });
 formatter.result({
-  "duration": 1427400,
+  "duration": 1307500,
   "status": "passed"
 });
 formatter.after({
-  "duration": 54600,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 26000,
+  "duration": 51400,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -515,11 +483,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 54400,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 160400,
+  "duration": 69300,
   "status": "passed"
 });
 formatter.scenario({
@@ -575,7 +539,7 @@ formatter.match({
   "location": "SoapSteps.calcTwoNumbers(String,int,String,int)"
 });
 formatter.result({
-  "duration": 804965500,
+  "duration": 841003500,
   "status": "passed"
 });
 formatter.match({
@@ -588,23 +552,15 @@ formatter.match({
   "location": "SoapSteps.checkResult(int)"
 });
 formatter.result({
-  "duration": 1896700,
+  "duration": 2060800,
   "status": "passed"
 });
 formatter.after({
-  "duration": 95500,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 46300,
+  "duration": 73000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 57400,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 182500,
+  "duration": 51500,
   "status": "passed"
 });
 formatter.scenario({
@@ -660,7 +616,7 @@ formatter.match({
   "location": "SoapSteps.calcTwoNumbers(String,int,String,int)"
 });
 formatter.result({
-  "duration": 648018200,
+  "duration": 639016000,
   "status": "passed"
 });
 formatter.match({
@@ -673,15 +629,11 @@ formatter.match({
   "location": "SoapSteps.checkResult(int)"
 });
 formatter.result({
-  "duration": 1366800,
+  "duration": 1190000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 59600,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 30300,
+  "duration": 50400,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -739,11 +691,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 46600,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 162700,
+  "duration": 58700,
   "status": "passed"
 });
 formatter.scenario({
@@ -799,7 +747,7 @@ formatter.match({
   "location": "SoapSteps.calcTwoNumbers(String,int,String,int)"
 });
 formatter.result({
-  "duration": 677275500,
+  "duration": 604982900,
   "status": "passed"
 });
 formatter.match({
@@ -812,23 +760,15 @@ formatter.match({
   "location": "SoapSteps.checkResult(int)"
 });
 formatter.result({
-  "duration": 1841800,
+  "duration": 2432700,
   "status": "passed"
 });
 formatter.after({
-  "duration": 59800,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 31100,
+  "duration": 55600,
   "status": "passed"
 });
 formatter.before({
-  "duration": 38500,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 128300,
+  "duration": 29800,
   "status": "passed"
 });
 formatter.scenario({
@@ -884,7 +824,7 @@ formatter.match({
   "location": "SoapSteps.calcTwoNumbers(String,int,String,int)"
 });
 formatter.result({
-  "duration": 494015300,
+  "duration": 852033100,
   "status": "passed"
 });
 formatter.match({
@@ -897,15 +837,11 @@ formatter.match({
   "location": "SoapSteps.checkResult(int)"
 });
 formatter.result({
-  "duration": 1852600,
+  "duration": 2797100,
   "status": "passed"
 });
 formatter.after({
-  "duration": 297900,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 34800,
+  "duration": 225400,
   "status": "passed"
 });
 });
